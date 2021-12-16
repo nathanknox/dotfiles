@@ -1,0 +1,109 @@
+" =========================
+" Init setup:
+" git clone to ~ then `ln -s ~/.vim/vimrc ~/.vimrc`
+" =========================
+
+" -------------------------
+" General improvements
+" -------------------------
+set clipboard=unnamed
+set nocompatible
+set modelines=0
+filetype plugin indent on
+syntax on
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
+set ttyfast
+set ruler
+inoremap jk <ESC>
+
+" -------------------------
+" Search/highlighting
+" -------------------------
+nnoremap / /\v
+vnoremap / /\v
+set incsearch
+set showmatch
+set hlsearch
+" <leader> shortcut to turn off search highlighting
+nnoremap <leader><space> :noh<cr>
+" Default rainbow parens on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" -------------------------
+" Useful <leader> tidbits
+" -------------------------
+" Strip all trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+" Open new split and select it
+nnoremap <leader>w <C-w>v<C-w>l
+" Rainbow parens toggle
+nnoremap <leader>R :RainbowParenthesesToggle<CR>
+
+" -------------------------
+" Handling long lines
+" -------------------------
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+" set colorcolumn=85
+
+" -------------------------
+" Disable arrow keys - an intentional handicap
+" -------------------------
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" -------------------------
+" Plugins
+" -------------------------
+let g:scala_scaladoc_indent = 1
+let g:limelight_conceal_ctermfg = 245  " Solarized Base1
+let g:limelight_conceal_guifg = '#8a8a8a'  " Solarized Base1
+nnoremap <leader>l :Limelight!!<CR>
+
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
+
+" -------------------------
+" Spellcheck settings
+" -------------------------
+set spell spelllang=en_us
+hi clear SpellBad
+hi SpellBad cterm=underline
+" Autofix (1st choice) spelling with <leader>f
+nnoremap <leader>f 1z=
+" Toggle spelling visuals with <leader>s
+nnoremap <leader>s :set spell!<CR>
+
+" -------------------------
+" Reminders/tips, etc.
+" -------------------------
+" suggestions for misspelled word : 'z='
+" mark as correct                 : 'zg'
+" mark as misspelled              : 'zw'
+" next misspelled word            : ']s'
+" last misspelled word            : '[s'
+"
+" utilize text objects
+"   words                         : 'iw' and 'aw'
+"   sentences                     : 'is' and 'as'
+"   paragraphs                    : 'ip' and 'ap'
+"   tags                          : 'it' and 'at'
+"   ... And other delimiters      : ",',`,(,[,{ etc.
