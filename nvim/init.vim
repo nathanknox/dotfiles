@@ -1,9 +1,20 @@
-"       Personal vim configuration of Nathan Knox
+"                  _   _ _  __
+"                 | \ | | |/ /
+"                 |  \| | ' / 
+"                 | . ` |  <  
+"                 | |\  | . \ 
+"                 |_| \_|_|\_\
+"
+"    Personal vim configuration of Nathan Knox
 
 "--------------------------------------------------------------------------
 " General settings
 "--------------------------------------------------------------------------
-set clipboard=unnamed
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set hidden
+set clipboard=unnamedplus
 set nocompatible
 set modelines=0
 filetype plugin indent on
@@ -14,13 +25,14 @@ set showmode
 set showcmd
 set wildmenu
 set wildmode=list:longest
+set list
+set listchars=tab:▸\ ,trail:·
 set ttyfast
 set ruler
 set incsearch
 set showmatch
 set hlsearch
-set wrap
-set textwidth=79
+set nowrap
 set formatoptions=qrn1
 "--------------------------------------------------------------------------
 " Key maps
