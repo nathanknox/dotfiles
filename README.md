@@ -1,2 +1,2 @@
 # dotfiles
-Where the shell is `home`?
+Where the shell is `$home`?
