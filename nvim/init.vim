@@ -130,7 +130,7 @@ source ~/.config/nvim/plugins/floaterm.vim
 "source ~/.config/nvim/plugins/pasta.vim
 "source ~/.config/nvim/plugins/peekaboo.vim
 "source ~/.config/nvim/plugins/phpactor.vim
-"source ~/.config/nvim/plugins/polyglot.vim
+source ~/.config/nvim/plugins/polyglot.vim
 "source ~/.config/nvim/plugins/projectionist.vim
 "source ~/.config/nvim/plugins/quickscope.vim
 "source ~/.config/nvim/plugins/repeat.vim
