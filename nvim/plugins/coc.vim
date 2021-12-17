@@ -3,19 +3,12 @@ Plug 'antoinemadec/coc-fzf'
 
 let g:coc_global_extensions = [
     \ 'coc-metals',
-    \ 'coc-pyright',
     \ 'coc-diagnostic',
     \ 'coc-git',
-    \ 'coc-html',
     \ 'coc-json',
     \ 'coc-pairs',
     \ 'coc-sh',
-    \ 'coc-snippets',
     \ 'coc-sql',
-    \ 'coc-svg',
-    \ 'https://github.com/rodrigore/coc-tailwind-intellisense',
-    \ 'coc-tsserver',
-    \ '@yaegassy/coc-volar',
 \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
