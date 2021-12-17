@@ -6,97 +6,71 @@
 "                 |_| \_|_|\_\
 "
 "    Personal vim configuration of Nathan Knox
+
 "--------------------------------------------------------------------------
 " General settings
 "--------------------------------------------------------------------------
-"set expandtab
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set hidden
-"set signcolumn=yes:2
-set relativenumber
-set number
-set termguicolors
-set undofile
-set spell
-set title
-set ignorecase
-set smartcase
-set wildmode=longest:full,full
-set nowrap
+set clipboard=unnamedplus
+set nocompatible
+set modelines=0
+filetype plugin indent on
+syntax on
+set encoding=utf-8
+set scrolloff=3
+set showmode
+set showcmd
+set wildmenu
+set wildmode=list:longest
 set list
 set listchars=tab:▸\ ,trail:·
-set mouse=a
-set scrolloff=8
-set sidescrolloff=8
-set nojoinspaces
-set splitright
-set clipboard=unnamedplus
-set confirm
-set exrc
-set backup
-set backupdir=~/.local/share/nvim/backup//
-set updatetime=300 " Reduce time for highlighting other references
-set redrawtime=10000 " Allow more time for loading syntax on large files
-
+set ttyfast
+set ruler
+set incsearch
+set showmatch
+set hlsearch
+set nowrap
+set formatoptions=qrn1
 "--------------------------------------------------------------------------
 " Key maps
 "--------------------------------------------------------------------------
-
-"let mapleader = "\<space>"
-
-nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
-nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
-nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
-
-nmap <leader>k :nohlsearch<CR>
-"nmap <leader>Q :bufdo bdelete<cr>
-nnoremap <leader>s :set spell!<CR>
+inoremap jk <ESC>
+nnoremap / /\v
+vnoremap / /\v
+nnoremap <leader><space> :noh<cr>
 " Strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
+" Open new split and select it
+nnoremap <leader>w <C-w>v<C-w>l
+" Rainbow parens toggle
+nnoremap <leader>R :RainbowParenthesesToggle<CR>
+nnoremap <leader>l :Limelight!!<CR>
+nnoremap <leader>s :set spell!<CR>
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings<cr>
+nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 " Allow gf to open non-existent files
 map gf :edit <cfile><cr>
 
-" Reselect visual selection after indenting
-vnoremap < <gv
-vnoremap > >gv
-
-" Maintain the cursor position when yanking a visual selection
-" http://ddrscott.github.io/blog/2016/yank-without-jank/
-vnoremap y myy`y
-vnoremap Y myY`y
-
-" When text is wrapped, move by terminal rows, not lines, unless a count is provided
-noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
-noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Paste replace visual selection without copying it
-vnoremap <leader>p "_dP
-
-" Make Y behave like the other capitals
-nnoremap Y y$
-
-" Keep it centered
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap J mzJ`z
-
-" Open the current file in the default program
-nmap <leader>x :!xdg-open %<cr><cr>
-
-" Quicky escape to normal mode
-imap jk <esc>
-
-" Easy insertion of a trailing ; or , from insert mode
-imap ;; <Esc>A;<Esc>
-imap ,, <Esc>A,<Esc>
-
-"cmap w!! %!sudo tee > /dev/null %
-
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
 "--------------------------------------------------------------------------
 " Plugins
 "--------------------------------------------------------------------------
+" Default rainbow parens on
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 " Automatically install vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -106,15 +80,15 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin(data_dir . '/plugins')
-
+"
 "source ~/.config/nvim/plugins/abolish.vim
 "source ~/.config/nvim/plugins/airline.vim
 "source ~/.config/nvim/plugins/arduino.vim
-source ~/.config/nvim/plugins/coc.vim
-source ~/.config/nvim/plugins/commentary.vim
+"source ~/.config/nvim/plugins/coc.vim
+"source ~/.config/nvim/plugins/commentary.vim
 "source ~/.config/nvim/plugins/context-commentstring.vim
 "source ~/.config/nvim/plugins/dispatch.vim
-source ~/.config/nvim/plugins/dracula.vim
+"source ~/.config/nvim/plugins/dracula.vim
 "source ~/.config/nvim/plugins/editorconfig.vim
 "source ~/.config/nvim/plugins/eunuch.vim
 "source ~/.config/nvim/plugins/exchange.vim
@@ -138,7 +112,7 @@ source ~/.config/nvim/plugins/dracula.vim
 "source ~/.config/nvim/plugins/sayonara.vim
 "source ~/.config/nvim/plugins/smooth-scroll.vim
 "source ~/.config/nvim/plugins/splitjoin.vim
-source ~/.config/nvim/plugins/surround.vim
+"source ~/.config/nvim/plugins/surround.vim
 "source ~/.config/nvim/plugins/targets.vim
 "source ~/.config/nvim/plugins/textobj-xmlattr.vim
 "source ~/.config/nvim/plugins/tmux-navigator.vim
@@ -148,16 +122,18 @@ source ~/.config/nvim/plugins/surround.vim
 "source ~/.config/nvim/plugins/visual-star-search.vim
 "source ~/.config/nvim/plugins/which-key.vim
 
-call plug#end()
-doautocmd User PlugLoaded
+"call plug#end()
+"doautocmd User PlugLoaded
+
+"let g:scala_scaladoc_indent = 1
+"let g:limelight_conceal_ctermfg = 245  " Solarized Base1
+"let g:limelight_conceal_guifg = '#8a8a8a'  " Solarized Base1
+
+"call plug#begin('~/.vim/plugged')
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"call plug#end()
 
 "--------------------------------------------------------------------------
 " Miscellaneous
 "--------------------------------------------------------------------------
-
-"augroup FileTypeOverrides
-"    autocmd!
-"    " Use '//' instead of '/* */' comments
-"    autocmd FileType php setlocal commentstring=//%s
-"    autocmd TermOpen * setlocal nospell
-"augroup END

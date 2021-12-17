@@ -1,0 +1,26 @@
+{
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnType": true,
+    "diagnostic.checkCurrentLine": true,
+    "diagnostic.virtualText": true,
+    "diagnostic.enableMessage": "jump",
+    "diagnostic.errorSign": "✖",
+    "diagnostic.warningSign": "⚠",
+    "diagnostic.infoSign": "•",
+    "diagnostic.hintSign": "•",
+    "diagnostic-languageserver.filetypes": {
+        "sh": "shellcheck",
+		"python": "flake-8"
+    },
+    "diagnostic-languageserver.formatFiletypes": {
+        "python": "black"
+    },
+    "diagnostic-languageserver.mergeConfig": true,
+    "git.enableGutters": true,
+    "git.addedSign.text": "┃",
+    "git.changedSign.text": "┃",
+    "git.removedSign.text": "▁",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▔",
+    "prettier.requireConfig": true
+}
