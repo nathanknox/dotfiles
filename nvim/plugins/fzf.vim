@@ -19,4 +19,4 @@ nmap <leader>b :Buffers<cr>
 nmap <leader>h :History<cr>
 nmap <leader>r :Rg<cr>
 nmap <leader>R :Rg<space>
-nmap <leader>gb :GBranches<cr>
+nmap <leader>gb :GBranches<cr>Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
