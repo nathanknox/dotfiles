@@ -9,11 +9,7 @@
     "diagnostic.infoSign": "•",
     "diagnostic.hintSign": "•",
     "diagnostic-languageserver.filetypes": {
-        "sh": "shellcheck",
-		"python": "flake-8"
-    },
-    "diagnostic-languageserver.formatFiletypes": {
-        "python": "black"
+        "sh": "shellcheck"
     },
     "diagnostic-languageserver.mergeConfig": true,
     "git.enableGutters": true,
