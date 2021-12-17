@@ -49,6 +49,9 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>R :RainbowParenthesesToggle<CR>
 nnoremap <leader>l :Limelight!!<CR>
 nnoremap <leader>s :set spell!<CR>
+nmap <leader>ve :edit ~/.config/nvim/init.vim<cr>
+nmap <leader>vc :edit ~/.config/nvim/coc-settings<cr>
+nmap <leader>vr :source ~/.config/nvim/init.vim<cr>
 
 nnoremap <up> <nop>
 nnoremap <down> <nop>

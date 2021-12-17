@@ -104,17 +104,11 @@ prompt pure
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias please="sudo"
 alias vim=/usr/local/bin/vim
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
 source /Users/nathan.knox/.ghcup/env
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-
-# || pyenv setup ||
-export PATH="/Users/nathan.knox/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 export PATH=/Users/nathan.knox/.local/share/fury/usr/active/bin:/Users/nathan.knox/.local/share/fury/usr/active/opt:$PATH # Added by Fury
 fpath=(/Users/nathan.knox/.local/share/fury/usr/0.18.29/script /Users/nathan.knox/.local/share/fury/usr/active/completions $fpath) # Added by Fury
