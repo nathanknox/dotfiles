@@ -17,6 +17,5 @@
     "git.changedSign.text": "┃",
     "git.removedSign.text": "▁",
     "git.topRemovedSign.text": "▔",
-    "git.changeRemovedSign.text": "▔",
-    "prettier.requireConfig": true
+    "git.changeRemovedSign.text": "▔"
 }
