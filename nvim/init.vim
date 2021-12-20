@@ -140,7 +140,6 @@ source ~/.config/nvim/plugins/polyglot.vim
 "source ~/.config/nvim/plugins/splitjoin.vim
 source ~/.config/nvim/plugins/surround.vim
 "source ~/.config/nvim/plugins/targets.vim
-"source ~/.config/nvim/plugins/textobj-xmlattr.vim
 "source ~/.config/nvim/plugins/tmux-navigator.vim
 "source ~/.config/nvim/plugins/unimpaired.vim
 "source ~/.config/nvim/plugins/vim-test.vim
