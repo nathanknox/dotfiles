@@ -7,6 +7,8 @@
     ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.zshrc: zshrc
+    ~/.tmux: tmux
+    ~/.tmux.conf: tmux.conf
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
