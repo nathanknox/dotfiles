@@ -17,5 +17,14 @@
     "git.changedSign.text": "┃",
     "git.removedSign.text": "▁",
     "git.topRemovedSign.text": "▔",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "/Users/nathan.knox/.pyenv/shims/flake8",
+    "python.linting.flake8Args": ["--max-line-length=80"],
+    "python.pythonPath": "/Users/nathan.knox/.pyenv/shims/python",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length", "80"],
+    "python.formatting.blackPath": "/Users/nathan.knox/.pyenv/shims/black",
+    "coc.preferences.formatOnSaveFiletypes": ["python", "json"],
     "git.changeRemovedSign.text": "▔"
 }

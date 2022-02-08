@@ -122,7 +122,7 @@ autoload -U compinit && compinit # Added by Fury
     fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+eval "$(fasd --init auto)"
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # >>> scala-cli completions >>>
