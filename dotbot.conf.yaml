@@ -1,6 +1,7 @@
 - clean: [
     '~',
-    '~/.mutt'
+    '~/.mutt',
+    './.tmux'
 ]
 
 - link:
