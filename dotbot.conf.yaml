@@ -8,7 +8,7 @@
     ~/.config/kitty: kitty
     ~/.config/nvim: nvim
     ~/.zshrc: zshrc
-    ~/.tmux: tmux
+    # ~/.tmux: tmux
     ~/.tmux.conf: tmux.conf
 
 - shell:

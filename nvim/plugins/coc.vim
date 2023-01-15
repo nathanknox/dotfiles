@@ -2,13 +2,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'antoinemadec/coc-fzf'
 
 let g:coc_global_extensions = [
-    \ 'coc-metals',
     \ 'coc-diagnostic',
     \ 'coc-git',
     \ 'coc-json',
     \ 'coc-pairs',
     \ 'coc-sh',
     \ 'coc-sql',
+    \ 'coc-pyright',
 \ ]
 
 " Use tab for trigger completion with characters ahead and navigate.
