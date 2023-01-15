@@ -33,7 +33,7 @@
     "coc.preferences.formatOnSaveFiletypes": [
         "python",
         "json",
-        "hcl"
+        "hcl",
     ],
     "languageserver": {
         "terraform": {
